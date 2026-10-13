@@ -1,0 +1,10 @@
+# Dependencies
+node_modules/
+
+# Generated screenshots from scripts/shoot*.js
+shots/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

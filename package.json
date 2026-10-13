@@ -1,0 +1,33 @@
+{
+  "name": "fidelity-medic",
+  "version": "1.0.0",
+  "description": "Fidelity Medic Uganda - responsive healthcare website demo. Where your life matters.",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "build:css": "tailwindcss -i ./src/input.css -o ./public/css/main.css --minify",
+    "watch:css": "tailwindcss -i ./src/input.css -o ./public/css/main.css --watch",
+    "images": "node scripts/optimize-images.js",
+    "build": "npm run images && npm run build:css",
+    "dev": "npm run watch:css",
+    "serve": "npx --yes serve . -l 3000",
+    "verify": "node scripts/verify.js",
+    "shoot": "node scripts/shoot.js",
+    "shoot:slides": "node scripts/shoot-slides.js",
+    "check": "npm run verify && npm run shoot"
+  },
+  "keywords": [
+    "healthcare",
+    "tailwindcss",
+    "uganda"
+  ],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "puppeteer": "^25.13.0",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "lucide-static": "^1.54.0"
+  }
+}
